@@ -150,9 +150,9 @@ export const TrackList = () => {
           <ListItem>
             <ListItemText sx={{ width: '35%' }} primary="Track Name" />
             <ListItemText sx={{ width: '30%' }} primary="Genre Name" />
-            <ListItemText sx={{ width: '5%' }} primary="Price" />
+            <ListItemText sx={{ width: '10%' }} primary="Price" />
             <ListItemText sx={{ width: '10%' }} primary="Duration" />
-            <ListItemText sx={{ width: '20%' }} primary="Artist Name" />
+            <ListItemText sx={{ width: '15%' }} primary="Artist Name" />
           </ListItem>
         </List>
         <InfiniteScroll
@@ -170,9 +170,9 @@ export const TrackList = () => {
               <ListItem key={track.id}>
                 <ListItemText sx={{ width: '35%' }} primary={track.name} />
                 <ListItemText sx={{ width: '30%' }} primary={track.genre} />
-                <ListItemText sx={{ width: '5%' }} primary={track.price} />
-                <ListItemText sx={{ width: '10%' }} primary={track.duration} />
-                <ListItemText sx={{ width: '20%' }} primary={track.artist.name} />
+                <ListItemText sx={{ width: '10%' }} primary={`${track.price} $`} />
+                <ListItemText sx={{ width: '10%' }} primary={`${track.duration} s`} />
+                <ListItemText sx={{ width: '15%' }} primary={track.artist.name} />
               </ListItem>
             ))}
           </List>
